@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ocicle</title>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(180deg, #5ec2f0, #1b6ca8);
+        overflow: hidden;
+    }
+
+    /* Efeito suave tipo ondas */
+    body::after {
+        content: "";
+        position: absolute;
+        width: 200%;
+        height: 200%;
+        background: radial-gradient(circle at 50% 50%, rgba(0, 180, 255, 0.2), transparent 60%);
+        animation: float 8s ease-in-out infinite;
+    }
+
+    @keyframes float {
+        0% { transform: translate(-10%, -10%); }
+        50% { transform: translate(0%, 0%); }
+        100% { transform: translate(-10%, -10%); }
+    }
+
+    .card {
+        position: relative;
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(10px);
+        padding: 60px;
+        width: 500px;
+        border-radius: 25px;
+        text-align: center;
+        color: white;
+        box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+    }
+
+    h1 {
+        font-size: 36px;
+        margin-bottom: 20px;
+        letter-spacing: 2px;
+    }
+
+    p {
+        font-size: 18px;
+        opacity: 0.9;
+        line-height: 1.6;
+    }
+
+</style>
+
+</head>
+<body>
+
+<div class="card">
+    <h1>Bem-vindo ao Ocicle</h1>
+</div>
+
+</body>
+</html>

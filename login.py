@@ -1,4 +1,5 @@
 import tkinter as tk
+import webbrowser
 #conta primordial
 contas = [
     ("admpimentolas", "123💀💀"), #senha imposivel 🥶🥶
@@ -39,6 +40,8 @@ def login(): #fuction de login
         print('pode entrar')
         menssagem["text"] = "Seja bem-vindo!"
         menssagem.pack()
+        webbrowser.open("main.html")
+
     else:
         print('credenciais erradas!')
         menssagem["text"] = "Opps!, aparentente as credenciais estão erradas!"
